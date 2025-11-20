@@ -5,6 +5,7 @@ Serves reward inference using an HTTP server.
 ## New Install
 Original Geneval environment installation in A100 will meet problem for me, 
 making changes according to geneval install instruction in https://github.com/djghosh13/geneval/issues/12#issue-2727852470
+
 ### GenEval
 ```bash
 # First
@@ -13,6 +14,8 @@ conda activate reward_server
 # Then
 bash new_install.sh
 ```
+In 'new_install.sh', only add one line 'pip install gunicorn numpy opencv-python flask' in original geneval environment installation.
+
 Then download mask2former:
 
 ```bash
