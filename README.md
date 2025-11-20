@@ -14,7 +14,7 @@ conda activate reward_server
 # Then
 bash new_install.sh
 ```
-In 'new_install.sh', only add one line 'pip install gunicorn numpy opencv-python flask' in original geneval environment installation.
+In `new_install.sh`, only add one line `pip install gunicorn numpy opencv-python flask` in original geneval environment installation.
 
 Then download mask2former:
 
