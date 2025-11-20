@@ -2,6 +2,27 @@
 
 Serves reward inference using an HTTP server.
 
+## New Install
+Original installation in A100 will meet problem for me
+Making changes according to geneval install instruction in https://github.com/djghosh13/geneval/issues/12#issue-2727852470
+### GenEval
+```bash
+# First
+conda create -n reward_server python=3.8.10 -y
+conda activate reward_server
+# Then
+bash new_install.sh
+```
+Then download mask2former:
+
+```bash
+cd reward-server/
+mkdir -r ./model/mask2former2
+wget https://download.openmmlab.com/mmdetection/v2.0/mask2former/mask2former_swin-s-p4-w7-224_lsj_8x2_50e_coco/mask2former_swin-s-p4-w7-224_lsj_8x2_50e_coco_20220504_001756-743b7d99.pth -O ./model/mask2former2/mask2former_swin-s-p4-w7-224_lsj_8x2_50e_coco.pth
+```
+
+Then modify `MY_CONFIG_PATH` and `MY_CKPT_PATH` in `reward-server/reward_server/gen_eval.py` to your own paths.
+
 ## Install
 
 ### GenEval
